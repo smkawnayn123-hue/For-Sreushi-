@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguins & Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card img {
+            width: 100%;
+            height: 350px; /* Fixed height for a clean row */
+            object-fit: contain; /* THIS FIXES THE ASPECT RATIO */
+            background-color: #fff; /* Keeps the background clean if the photo is thin */
+            display: block;
+        }
+
+        .caption {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🐧 Our Penguin Friends</h2>
+    <div class="gallery-grid">
+        <div class="card">
+            <img src="images/penguin1.jpg" alt="Penguin Chick 1">
+            <div class="caption">The Fluffball</div>
+        </div>
+        <div class="card">
+            <img src="images/penguin2.jpg" alt="Penguin Chick 2">
+            <div class="caption">Double Trouble</div>
+        </div>
+        <div class="card">
+            <img src="images/penguin3.jpg" alt="Penguin Chick 3">
+            <div class="caption">Snow Day</div>
+        </div>
+        <div class="card">
+            <img src="images/penguin4.jpg" alt="Penguin Chick 4">
+            <div class="caption">Waddle Master</div>
+        </div>
+    </div>
+
+    <h2>✨ Meet Us</h2>
+    <div class="gallery-grid">
+        <div class="card">
+            <img src="images/us1.jpg" alt="Photo of us">
+            <div class="caption">The Team</div>
+        </div>
+        <div class="card">
+            <img src="images/us2.jpg" alt="Photo of us 2">
+            <div class="caption">Good Times</div>
+        </div>
+        <div class="card">
+            <img src="images/us3.jpg" alt="Photo of us 3">
+            <div class="caption">Memories</div>
+        </div>
+    </div>
+
+</body>
+</html>
