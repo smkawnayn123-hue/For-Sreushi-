@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sreushi ❄️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #F4F8FB;
+    color: #2C3E50;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+.intro {
+    background: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #2C3E50;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1a252f;
+}
+
+.image {
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.overlay-section {
+    position: relative;
+    color: white;
+}
+
+.overlay-section img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.glass {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<section class="intro">
+    <h1>For Sreushi</h1>
+    <p>The one who makes winter feel warm.</p>
+    <button onclick="enterSite()">Tap to Enter ❄️</button>
+</section>
+
+<!-- MAIN CONTENT -->
+<div id="mainContent" class="hidden">
+
+<section>
+    <h2>Sreushi,</h2>
+    <p>In the quietest moments, we still find warmth.<br>
+    Just like young emperor penguins who survive winter by standing close.</p>
+    <img src="photo1.jpg" class="image">
+</section>
+
+<section>
+    <p>In every season of life, I choose you.<br>
+    Not just when it's easy. Not just when it's warm.<br><br>
+    But always.</p>
+    <img src="photo2.jpg" class="image">
+</section>
+
+<section class="overlay-section">
+    <img src="photo3.jpg">
+    <div class="overlay-text">
+        <h2>No matter how cold the world becomes,<br>
+        we will stand side by side.</h2>
+    </div>
+</section>
+
+<section>
+    <img src="photo4.jpg" class="image">
+    <p>You are my calm. My warmth. My forever.</p>
+</section>
+
+<section>
+    <div class="glass">
+        <h2>Sreushi…<br>Will you be my Valentine?</h2>
+        <button onclick="yesAnswer()">Yes, Always ❄️</button>
+        <button onclick="stayClose()">Stay Close First 🐧</button>
+        <p id="response"></p>
+    </div>
+</section>
+
+</div>
+
+<script>
+function enterSite() {
+    document.querySelector('.intro').style.display = 'none';
+    document.getElementById('mainContent').classList.remove('hidden');
+    document.getElementById('mainContent').classList.add('fade');
+}
+
+function yesAnswer() {
+    document.getElementById('response').innerHTML =
+    "Then let’s face every winter together.<br><br>Side by side. Always.<br><br>— Syed Kawnayn";
+}
+
+function stayClose() {
+    document.getElementById('response').innerHTML =
+    "Come closer. Because emperor penguins don’t survive alone — they survive by staying close.";
+}
+</script>
+
+</body>
+</html>
